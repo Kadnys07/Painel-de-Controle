@@ -7,52 +7,69 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-  <nav class="navbar">
-    <h1>Painel de Controle</h1>
-    <div class="menu">
-      <button id="menu-toggle">☰</button>
-      <div class="dropdown hidden" id="dropdown-menu">
-        <a href="#">Perfil</a>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Relatórios</a>
+        <a href="#">Usuários</a>
         <a href="#">Configurações</a>
-        <a href="#">Sair</a>
-      </div>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="header">
+        <h1>Painel de Controle</h1>
+      </header>
+
+      <main class="dashboard">
+        <!-- Cards -->
+        <section class="cards">
+          <div class="card"><h2>Vendas</h2><p>R$ 12.450</p></div>
+          <div class="card"><h2>Usuários</h2><p>1.234</p></div>
+          <div class="card"><h2>Pedidos</h2><p>456</p></div>
+          <div class="card"><h2>Suporte</h2><p>23 pendentes</p></div>
+        </section>
+
+        <!-- Gráficos -->
+        <section class="graficos">
+          <div class="grafico">
+            <h3>Gráfico de Vendas</h3>
+            <img src=https://www.jaspersoft.com/content/dam/jaspersoft/images/graphics/infographics/line-chart-example.svg alt="Gráfico de Vendas" />
+          </div>
+        </section>
+        <!-- Tabela de Dados -->
+        <section class="tabela">
+          <h3>Últimos Pedidos</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Data</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#001</td>
+                <td>João Silva</td>
+                <td>01/10/2023</td>
+                <td>Entregue</td>
+              </tr>
+              <tr>
+                <td>#002</td>
+                <td>Maria Oliveira</td>
+                <td>02/10/2023</td>
+                <td>Pendente</td>
+              </tr>
+              <!-- Mais linhas conforme necessário -->
+            </tbody>
+          </table>
+      </main>
     </div>
-  </nav>
-
-  <main class="dashboard">
-    
-    <section class="cards">
-      <div class="card">
-        <h2>Vendas</h2>
-        <p>R$ 12.450</p>
-      </div>
-      <div class="card">
-        <h2>Usuários</h2>
-        <p>1.234</p>
-      </div>
-      <div class="card">
-        <h2>Pedidos</h2>
-        <p>456</p>
-      </div>
-      <div class="card">
-        <h2>Suporte</h2>
-        <p>23 pendentes</p>
-      </div>
-    </section>
-
-    <section class="graficos">
-      <div class="grafico">
-        <h3>Gráfico de vendas (imagem simulada)</h3>
-        <img src="https://via.placeholder.com/600x300?text=Gráfico+de+Vendas" alt="Gráfico de Vendas">
-      </div>
-      <div class="grafico">
-        <h3>Gráfico de usuários (imagem simulada)</h3>
-        <img src="https://via.placeholder.com/600x300?text=Gráfico+de+Usuários" alt="Gráfico de Usuários">
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+  </div>
 </body>
+
 </html>

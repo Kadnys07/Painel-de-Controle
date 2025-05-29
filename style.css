@@ -1,88 +1,98 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-  }
-  
-  .navbar {
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar .menu {
-    position: relative;
-  }
-  
-  .dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
-  }
-  
-  .dropdown a {
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .dropdown a:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .dashboard {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: center;
-  }
-  
-  .card h2 {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .card p {
-    font-size: 1.5em;
-    color: #007bff;
-  }
-  
-  .graficos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .grafico {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  height: 100vh;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.header {
+  grid-area: header;
+  background-color: #444;
+  color: white;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+.main {
+  grid-area: main;
+  padding: 20px;
+  background-color: #f4f6f8;
+  overflow-y: auto;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.graficos .grafico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.tabela  {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.tabela th, .tabela td {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.tabela th {
+  background-color: #444;
+  color: #ffff;
+}
+h3{
+  margin-top: 0;
+  color: #333;
+}
